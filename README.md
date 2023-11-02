@@ -27,7 +27,7 @@ This repository documents the creation and management of "Students_Record" datab
 
 -	INSERT INTO: I used the ‘INSERT INTO’ syntax to insert sample data into my tables.
   
--	EXEC.sp_rename: I used this to rename my column.
+-	EXEC sp_rename: I used this to rename my column.
 
 
 ## DATABASE SCHEMA
@@ -39,10 +39,12 @@ This repository documents the creation and management of "Students_Record" datab
 -	Gender
 -	Name
 -	Course
-	
+  
 #### Constraints:
 -	‘Student_id’ is a Primary Key
 -	‘Subject’ and ‘Student_id’ cannot be NULL
+
+---
 
 ### Table: Health_records
 #### Columns:
@@ -54,6 +56,8 @@ This repository documents the creation and management of "Students_Record" datab
 #### Constraints:
 -	‘Health_id’ is a Primary Key
 
+---
+
 ### Table: Performance
 #### Columns:
 -	Performance_id (Primary Key)
@@ -62,10 +66,13 @@ This repository documents the creation and management of "Students_Record" datab
 -	score
 -	gender
 
-  
+---
+
 ### Table Alterations
 •	Renamed the "subject" column in the "students_info" table to "course."
 •	Dropped the "age" column from the "students_info" table.
+
+---
 
 ## SQL COMMANDS AND RESULTS
 
@@ -73,6 +80,8 @@ This repository documents the creation and management of "Students_Record" datab
 I created the Database and named it as ‘Students_Record’
 
 ![](createdb.png)
+
+---
 
 ### 2.	Creating the Tables
 I created the tables and columns, populating them with values and ensuring that ID were unique. Primary keys were used for Dimension Tables while Foreign keys were used for Facts Tables.
@@ -86,6 +95,7 @@ I created the tables and columns, populating them with values and ensuring that 
   
 ![](health_records.png)
 
+---
 
 ### 3.  Creating a Performance Table and then forming a Relationship among the 3 tables
 
@@ -97,23 +107,33 @@ Health_ID in the performance table was used to link Health_ID in Health_records 
 
 ![](performance.png)
 
+---
 
 ### 4.	Adding Constraints: This was achieved using NOT NULL. This will stop columns where I have added this constraint from taking null values. As you can see, from the syntax and results, the not null was added to student_id column and subject column.
 
 
 ![](constraints.png)
 
+---
+
 ### 5.	Renaming the Column: I renamed column name ‘Subject’ to ‘Course’ using Exec.sp_rename old column name with new column name.
+
 ![](course.png)
+
+---
 
 ### 6.	Dropping A Column: Best practices for a data engineer is to make a copy of a table before dropping a column in SQL. This is because a column which has been dropped cannot be restored and all values will be lost. After making a copy of the table, I dropped the ‘Age’ Column.
 	
 ![](students_info_copy.png)
 
+
+
 ![](no_age.png)
 
+---
+
 ## CONCLUSION 
-I have successfully designed and managed a 'Students Records' database using SQL. I created tables, enforced data integrity through constraints, and adapted the structure to evolving needs. This project has equipped me with valuable skills in SQL, data organization, and has prepared me for future data analysis and custom query development. It highlights my dedication to effective data management, a critical asset for informed decision-making.
+I have successfully designed and managed a 'Students Record' database using SQL. I created tables, enforced data integrity through constraints, and adapted the structure to evolving needs. This project has equipped me with valuable skills in SQL, data organization, and has prepared me for future data analysis and custom query development. It highlights my dedication to effective data management, a critical asset for informed decision-making.
 
 
 
