@@ -118,7 +118,7 @@ This was achieved using NOT NULL. This will stop columns where I have added this
 ---
 
 ### 5.	Renaming the Column:
-I renamed column name ‘Subject’ to ‘Course’ using Exec.sp_rename old column name with new column name.
+I renamed column name ‘Subject’ to ‘Course’ using Exec sp_rename old column name with new column name.
 
 ![](course.png)
 
