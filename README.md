@@ -109,26 +109,27 @@ Health_ID in the performance table was used to link Health_ID in Health_records 
 
 ---
 
-### 4.	Adding Constraints: This was achieved using NOT NULL. This will stop columns where I have added this constraint from taking null values. As you can see, from the syntax and results, the not null was added to student_id column and subject column.
+### 4.	Adding Constraints:
+This was achieved using NOT NULL. This will stop columns where I have added this constraint from taking null values. As you can see, from the syntax and results, the not null was added to student_id column and subject column.
 
 
 ![](constraints.png)
 
 ---
 
-### 5.	Renaming the Column: I renamed column name ‘Subject’ to ‘Course’ using Exec.sp_rename old column name with new column name.
+### 5.	Renaming the Column:
+I renamed column name ‘Subject’ to ‘Course’ using Exec.sp_rename old column name with new column name.
 
 ![](course.png)
 
 ---
 
-### 6.	Dropping A Column: Best practices for a data engineer is to make a copy of a table before dropping a column in SQL. This is because a column which has been dropped cannot be restored and all values will be lost. After making a copy of the table, I dropped the ‘Age’ Column.
+### 6.	Dropping A Column:
+Best practices for a data engineer is to make a copy of a table before dropping a column in SQL. This is because a column which has been dropped cannot be restored and all values will be lost. After making a copy of the table, I dropped the ‘Age’ Column.
 	
 ![](students_info_copy.png)
 
-
-
-![](no_age.png)
+![](no_age_column.png)
 
 ---
 
